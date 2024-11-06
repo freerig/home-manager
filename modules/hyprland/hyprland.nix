@@ -40,6 +40,15 @@
 				];
 			};
 
+			decoration = {
+				blur = {
+					enabled = true;
+					size = 1;
+					passes = 6;
+				};
+				drop_shadow = false;
+			};
+
 			misc = {
 				force_default_wallpaper = false;
 			};

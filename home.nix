@@ -7,7 +7,7 @@
 	
 	# Oh yeah
 	stylix.enable = true;
-	stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+	# stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
 	stylix.image = ./WindowsXP.jpg;
 	stylix.polarity = "dark";
 	stylix.autoEnable = true;
@@ -42,11 +42,17 @@
 		# clipboard-jh 	# didn't tried but it seems good
 
 		ags
+		fastfetch
 	];
 	programs = {
 		waybar.enable = true;
 		bash.enable = true;
-		kitty.enable = true;
+		kitty = {
+			enable = true;
+			settings = {
+				background_opacity = lib.mkForce 0.75;
+			};
+		};
 	};
 
 	gtk.enable = true;
